@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/nav_feature_one">
+    <action
+        android:id="@+id/action_to_feature_two"
+        app:destination="@+id/nav_feature_two"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_to_feature_one"
+        app:destination="@+id/nav_feature_one"
+        app:popUpToInclusive="true" />
+
+    <include app:graph="@navigation/nav_feature_one" />
+    <include app:graph="@navigation/nav_feature_two" />
+</navigation>
